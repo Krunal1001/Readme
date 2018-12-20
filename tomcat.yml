@@ -1,0 +1,34 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Checking pre-requisite Java,wget,path /opt/tomcat
+    yum:
+     name: "{{ items }}"
+     state: present
+     with_items:
+       - java-1.8.0-openjdk
+       - wget
+     file: path=/opt/tomcat state=directory
+  - name: Downloading tomcat at client site
+    get_url:
+       url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.29/bin/apache-tomcat-8.5.29.tar.gz
+       dest: /opt/tomcat
+
+  - name: Extract File
+    shell: tar -xvzf /opt/tomcat/apache-tomcat-8.5.29.tar.gz
+    file:
+      path: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/*.sh
+      mode: 0755
+
+  - name: Download and extract sample app
+    unarchive:
+      src: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
+      dest: /opt/tomcat/apache-tomcat-8.5.29/webapps/
+
+  - name: waiting for 60 sec
+    wait_for: sleep=60
+        
+  - name: start services
+    command: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/catalina.sh start
+

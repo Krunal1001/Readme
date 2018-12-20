@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes        
+  tasks:
+  - name: Installing NTP
+    yum: 
+     name: ntp
+     state: present
+
+  - name: Coping NTP conf Files
+    copy: src=/etc/ntp.conf dest=/etc/ntp.conf
+
+- hosts: localhost
+  tasks:   
+  - name: Installing locally
+    yum: name=ntp state=present

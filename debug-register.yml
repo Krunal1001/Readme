@@ -1,0 +1,14 @@
+---
+- name: Dedug Playbook
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Talk package installtion
+    yum: name=telnet state=present
+    register: output
+
+  - name: Running Debuger to show tht output
+    debug:
+     var: output
+     verbosity: 1

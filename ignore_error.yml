@@ -1,0 +1,11 @@
+---
+- name: Ignore Error Playbook
+  hosts: all
+  become: yes 
+  tasks: 
+  - name: This will not be counted as failure
+    command: /bin/date
+    ignore_errors: yes
+    
+  - name: Second Task
+    service: name=httpd state=restarted

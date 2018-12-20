@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  vars:
+    user1: ""
+
+    - name: Install httpd
+      yum: name=httpd state=present
+      notify:
+        - start httpd
+    - name: echo
+      shell: echo THis {{ ansible_all_ipv4_addresses }} done by {{ user1 }} >> /var/www/html/index.html
+
+   handlers:
+    - name: start httpd
+      service: name=httpd state=started
+
+

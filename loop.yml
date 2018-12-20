@@ -1,0 +1,24 @@
+---
+- name: Playbook for testing conditions and loops
+  hosts: all
+  become: yes
+   
+  tasks:
+  - name: First Task for installing pkgs on centos
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items: 
+      - php
+      - telnet
+    when:
+      ansible_distribution == "CentOS"
+   
+  - name: Second Task
+    yum:
+       name: "{{ item }}"
+       state: present
+    with_items: 
+       - css
+    when: 
+       ansible_distribution == "ubuntu"

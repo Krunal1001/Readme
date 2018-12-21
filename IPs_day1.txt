@@ -1,0 +1,720 @@
+
+start service nfs
+cat /var/tmp/test.sh
+#!/bin/sh
+useradd testuser
+touch /tmp/testfile
+mkdir /tmp/testdir
+echo "my test output"
+
+
+
+History
+
+  1  cat /etc/*release
+    2  hostnamectl
+    3  hostnamectl set-hostname anssrv
+    4  hostname
+    5  hostnamectl set-hostname ans-srv
+    6  cat /etc/hosts
+    7  ifconfig
+    8  yum search nslookup
+    9  ifconfig
+   10  ping 172.31.34.45172.31.34.45
+   11  ping 172.31.34.45
+   12  yum install bind-utils -y
+   13  yum update
+   14  reboot
+   15  hostnamectl set-hostname ans-srv
+   16  yum install ansible
+   17  ansible --version
+   18  hostname
+   19  hostname -s
+   20  hostname -f
+   21  cat /etc/hostname
+   22  hostnamectl
+   23  sysctl kernel.hostname
+   24  hostnamectl
+   25  ifconfig
+   26  ping 172.31.34.45
+   27  nc -vz 172.31.34.45 22
+   28  vim /etc/ansible/hosts
+   29  vim /etc/ansible/ansible.cfg
+   30  less /etc/ansible/ansible.cfg
+   31  less /etc/ansible/hosts
+   32  ping ans-srv
+   33  cat /etc/ansible/ansible.cfg | grep '^\['
+   34  yum install vim
+   35  vim /etc/ansible/ansible.cfg
+   36  clear
+   37  env | less
+   38  vim /etc/hosts
+   39  hostname
+   40  ifconfig
+   41  ping 172.31.34.45
+   42  hostname
+   43  ifconfig
+   44  vim /etc/hosts
+   45  ping ans-clt
+   46  vim /etc/ansible/hosts
+   47  ansible localhost -m ping
+   48  ansible ans-clt -m ping
+   49  ansible any -m ping
+   50  ssh-keygen
+   51  ll
+   52  ls -a
+   53  ls -a .ssh/
+   54  cat .ssh/id_rsa.pub
+   55  ansible ans-clt -m ping
+   56  ansible ans-clt -m ping -u centos
+   57  cat .ssh/id_rsa.pub
+   58  ansible ans-clt -m ping -u centos
+   59  vim /etc/ansible/hosts
+   60  ansible web -m ping -u centos
+   61  ansible web -m ping
+   62  reboot
+   63  ansible ans-clt -m ping -ask-pass
+   64  ansible * -m ping
+   65  ansible "*" -m ping
+   66  vim /etc/ansible/hosts
+   67  ansible "*" -m ping
+   68  ansible "*" -m ping -u centos
+   69  vim /etc/ansible/hosts
+   70  ansible "*" -m ping
+   71  vim /etc/ansible/hosts
+   72  ansible-doc -l
+   73  ansible-doc
+   74  ansible-doc -l
+   75  ansible-doc
+   76  ansible-doc -l | wc -l
+   77  ansible-doc -l
+   78  ansible-doc -l | grep -i ping
+   79  ansible-doc -l | grep -i squid
+   80  ansible-doc -l | grep -i tcpdump
+   81  ansible-doc -l | grep -i patch
+   82  ansible-doc patch
+   83  ansible "*" -m patch
+   84  ansible "*" -m patch -u root
+   85  ansible "*" -m ping -u root
+   86  ansible "*" -a "ls -l"
+   87  ansible "*" -a "ls -l /"
+   88  ansible "*" -a "who"
+   89  ansible "*" -a "whoami"
+   90  whoami
+   91  ansible "*" -a "df -h"
+   92  df -h
+   93  ansible "*" -a "df -h"
+   94  vim /etc/ansible/hosts
+   95  ansible "*" -a "df -h"
+   96  ansible "*" -a "ifconfig"
+   97  ansible "*" -a "ifconfig" -b
+   98  ansible "*" -a "ll /root/" -b
+   99  ansible "*" -a "ll /root/"
+  100  ansible "*" -a "ls -l /root/"
+  101  ansible "*" -a "ls -l /root/" -u root
+  102  ansible "*" -a "ifconfig"
+  103  ansible "*" -a "ifconfig" -b
+  104  ansible "*" -a "ifconfig" -b root
+  105  ansible "*" -a "ifconfig" -b
+  106  ansible "*" -a "ls -l /" -b
+  107  ansible "*" -a "ls -l /root/" -b
+  108  ansible "*" -a "ls -l /root/"
+  109  ansible "*" -a "ls -l /root/" -b
+  110  ansible "*" -m user "kp"
+  111  ansible-doc user
+  112  ansible "*" -m user "user=kp"
+  113  ansible "*" -m user "name=kp state=preset" --ask-pass
+  114  ansible "*" -m user -a "name=kp state=preset" --ask-pass
+  115  ansible "*" -m user -a "name=kp state=preset"
+  116  ansible "*" -m user -a "name=kp state=preset" -b
+  117  ansible "*" -m user -a "name=kp state=present"
+  118  ansible "*" -m user -a "name=kp state=present" -b
+  119  ansible "*" -m servie -a "name=rsyslog state=stopped"
+  120  ansible "*" -m servie -a "name=rsyslog state=stopped" -b
+  121  ansible "*" -m servie -a "name=rsyslog state=stopped"
+  122  ansible "*" -m servie -a "name=rsyslog.service state=stopped" -b
+  123  ansible "*" -m servie -a "name=ntpd state=start" -b
+  124  ansible "*"  -a "uptime" -b
+  125  ansible "*"  -a "cat /etc/*release" -b
+  126  ansible "*"  -a "cat /etc/*release"
+  127  ansible "*"  -a "cat /etc/*relese"
+  128  ansible "*"  -a "cat /etc/*relese" -b
+  129  ansible "*"  -a "cat /etc/*release" -b
+  130  ansible "*"  -a "cat /etc/redhat-release" -b
+  131  ansible-doc | grep -i yum
+  132  ansible-doc -l | grep -i yum
+  133  ansible localhost -m yum -a "telnet"
+  134  ansible-doc yum
+  135  ansible localhost -m yum -a "name=telnet state=latest"
+  136  ansible "*" -m user -a "name=kp state=present uid=9999" -b
+  137  ansible-doc -l | grep -i file
+  138  ansible-doc -l | grep -i mkdir
+  139  ansible-doc -l | grep -i touch
+  140  ansible-doc -l | grep file
+  141  ansible-doc file
+  142  ansible "*" -m service -a name=ntpd state=start" -b
+  143  ansible "*" -m service -a "name=ntpd state=start" -b
+  144  ansible "*" -m service -a "name=ntpd state=started" -b
+  145  ansible "*" -m file -a "name=test state=start" -b
+  146  ansible "*" -m file -a "name=test path=/tmp/ owner=root" -b
+  147  ansible "*" -m file -a "name=test path=/tmp/ owner=root state=present" -b
+  148  ansible-doc file
+  149  ansible "*" -m file -a "name=test path=/tmp/ owner=root state=touch mode=u=rw,g=r,o=r" -b
+  150  ansible "*" -m file -a "name=/tmp/test path=/tmp/ owner=root state=touch mode=u=rw,g=r,o=r" -b
+  151  vim scp.sh
+  152  mv scp.sh script.sh
+  153  ansible "*" -m script -a "script.sh"
+  154  ansible "*" -m script -a "sh script.sh"
+  155  ansible "*" -m script -a "sh script.sh" -b
+  156  pwd
+  157  ansible "*" -m script -a "sh /root/script.sh" -b
+  158  ansible "*" -m shell -a "sh script.sh" -b
+  159  ansible "*" -m shell -a "script.sh" -b
+  160  ansible-doc shell
+  161  ansible "*" -m shell -a "executable script.sh" -b
+  162  ansible "*" -m shell -a "state=executable script.sh" -b
+  163  clear
+  164  history
+
+
+DAY 2 
+
+[root@ans-srv ~]# cat user.yml
+---
+- hosts: all
+  tasks:
+  - name: Creating user
+    user:
+     name: admin
+     state: present
+
+  - name: creating another user
+    user: name=admin2 state=present shell=/bin/sh
+
+[root@ans-srv ~]# ansible-playbook --syntax-check user.yml
+
+playbook: user.yml
+
+
+[root@ans-srv ~]# ansible-playbook user.yml  -b
+
+PLAY [all] ************************************************************************************************************************************************
+
+TASK [Gathering Facts] ************************************************************************************************************************************
+ok: [ans-clt]
+
+TASK [Creating user] **************************************************************************************************************************************
+changed: [ans-clt]
+
+TASK [creating another user] ******************************************************************************************************************************
+changed: [ans-clt]
+
+PLAY RECAP ************************************************************************************************************************************************
+ans-clt                    : ok=3    changed=2    unreachable=0    failed=0
+
+[root@ans-srv ~]#
+
+
+ansible-playbook --syntax-check user.yml
+ansible-playbook --check user.yml
+ansible-playbook user.yml  -b
+ansible-playbook user.yml --list-hosts
+
+
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Checking pre-requisite Java,wget,path /opt/tomcat
+    yum:
+     name: "{{ items }}"
+     state: present
+     with_items:
+       - java-1.8.0-openjdk
+       - wget
+     file: path=/opt/tomcat state=directory
+  - name: Downloading tomcat at client site
+    get_url:
+       url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.29/bin/apache-tomcat-8.5.29.tar.gz
+       dest: /opt/tomcat
+
+  - name: Extract File
+    shell: tar -xvzf /opt/tomcat/apache-tomcat-8.5.29.tar.gz
+    file:
+      path: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/*.sh
+      mode: 0755
+
+  - name: Download and extract sample app
+    unarchive:
+      src: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
+      dest: /opt/tomcat/apache-tomcat-8.5.29/webapps/
+
+  - name: waiting for 60 sec
+    wait_for: sleep=60
+
+  - name: start services
+    command: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/catalina.sh start
+
+
+
+==================================================================================
+
+[root@ans-srv ~]# cat httpd.yml
+---
+- hosts: all
+  become: yes
+  tasks:
+  vars:
+    user1: ""
+
+    - name: Install httpd
+      yum: name=httpd state=present
+      notify:
+        - start httpd
+    - name: echo
+      shell: echo THis {{ ansible_all_ipv4_addresses }} done by {{ user1 }} >> /var/www/html/index.html
+
+   handlers:
+    - name: start httpd
+      service: name=httpd state=started
+
+
+[root@ans-srv ~]#
+========================================================================================
+
+[root@ans-srv ~]# cat tomcat.yml
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Checking pre-requisite Java,wget,path /opt/tomcat
+    yum:
+     name: "{{ items }}"
+     state: present
+     with_items:
+       - java-1.8.0-openjdk
+       - wget
+     file: path=/opt/tomcat state=directory
+  - name: Downloading tomcat at client site
+    get_url:
+       url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.29/bin/apache-tomcat-8.5.29.tar.gz
+       dest: /opt/tomcat
+
+  - name: Extract File
+    shell: tar -xvzf /opt/tomcat/apache-tomcat-8.5.29.tar.gz
+    file:
+      path: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/*.sh
+      mode: 0755
+
+  - name: Download and extract sample app
+    unarchive:
+      src: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
+      dest: /opt/tomcat/apache-tomcat-8.5.29/webapps/
+
+  - name: waiting for 60 sec
+    wait_for: sleep=60
+
+  - name: start services
+    command: /opt/tomcat/apache-tomcat-8.5.29.tar.gz/catalina.sh start
+[root@ans-srv ~]#
+=============================================================================================
+[root@ans-srv ~]# cat user.yml
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Creating user
+    user:
+     name: admin
+     state: present
+
+  - name: creating another user
+    user: name=admin2 state=present shell=/bin/sh
+[root@ans-srv ~]#
+
+
+
+===============================================day2 
+
+ 1  cat /etc/*release
+    2  hostnamectl
+    3  hostnamectl set-hostname anssrv
+    4  hostname
+    5  hostnamectl set-hostname ans-srv
+    6  cat /etc/hosts
+    7  ifconfig
+    8  yum search nslookup
+    9  ifconfig
+   10  ping 172.31.34.45172.31.34.45
+   11  ping 172.31.34.45
+   12  yum install bind-utils -y
+   13  yum update
+   14  reboot
+   15  hostnamectl set-hostname ans-srv
+   16  yum install ansible
+   17  ansible --version
+   18  hostname
+   19  hostname -s
+   20  hostname -f
+   21  cat /etc/hostname
+   22  hostnamectl
+   23  sysctl kernel.hostname
+   24  hostnamectl
+   25  ifconfig
+   26  ping 172.31.34.45
+   27  nc -vz 172.31.34.45 22
+   28  vim /etc/ansible/hosts
+   29  vim /etc/ansible/ansible.cfg
+   30  less /etc/ansible/ansible.cfg
+   31  less /etc/ansible/hosts
+   32  ping ans-srv
+   33  cat /etc/ansible/ansible.cfg | grep '^\['
+   34  yum install vim
+   35  vim /etc/ansible/ansible.cfg
+   36  clear
+   37  env | less
+   38  vim /etc/hosts
+   39  hostname
+   40  ifconfig
+   41  ping 172.31.34.45
+   42  hostname
+   43  ifconfig
+   44  vim /etc/hosts
+   45  ping ans-clt
+   46  vim /etc/ansible/hosts
+   47  ansible localhost -m ping
+   48  ansible ans-clt -m ping
+   49  ansible any -m ping
+   50  ssh-keygen
+   51  ll
+   52  ls -a
+   53  ls -a .ssh/
+   54  cat .ssh/id_rsa.pub
+   55  ansible ans-clt -m ping
+   56  ansible ans-clt -m ping -u centos
+   57  cat .ssh/id_rsa.pub
+   58  ansible ans-clt -m ping -u centos
+   59  vim /etc/ansible/hosts
+   60  ansible web -m ping -u centos
+   61  ansible web -m ping
+   62  reboot
+   63  ansible ans-clt -m ping -ask-pass
+   64  ansible * -m ping
+   65  ansible "*" -m ping
+   66  vim /etc/ansible/hosts
+   67  ansible "*" -m ping
+   68  ansible "*" -m ping -u centos
+   69  vim /etc/ansible/hosts
+   70  ansible "*" -m ping
+   71  vim /etc/ansible/hosts
+   72  ansible-doc -l
+   73  ansible-doc
+   74  ansible-doc -l
+   75  ansible-doc
+   76  ansible-doc -l | wc -l
+   77  ansible-doc -l
+   78  ansible-doc -l | grep -i ping
+   79  ansible-doc -l | grep -i squid
+   80  ansible-doc -l | grep -i tcpdump
+   81  ansible-doc -l | grep -i patch
+   82  ansible-doc patch
+   83  ansible "*" -m patch
+   84  ansible "*" -m patch -u root
+   85  ansible "*" -m ping -u root
+   86  ansible "*" -a "ls -l"
+   87  ansible "*" -a "ls -l /"
+   88  ansible "*" -a "who"
+   89  ansible "*" -a "whoami"
+   90  whoami
+   91  ansible "*" -a "df -h"
+   92  df -h
+   93  ansible "*" -a "df -h"
+   94  vim /etc/ansible/hosts
+   95  ansible "*" -a "df -h"
+   96  ansible "*" -a "ifconfig"
+   97  ansible "*" -a "ifconfig" -b
+   98  ansible "*" -a "ll /root/" -b
+   99  ansible "*" -a "ll /root/"
+  100  ansible "*" -a "ls -l /root/"
+  101  ansible "*" -a "ls -l /root/" -u root
+  102  ansible "*" -a "ifconfig"
+  103  ansible "*" -a "ifconfig" -b
+  104  ansible "*" -a "ifconfig" -b root
+  105  ansible "*" -a "ifconfig" -b
+  106  ansible "*" -a "ls -l /" -b
+  107  ansible "*" -a "ls -l /root/" -b
+  108  ansible "*" -a "ls -l /root/"
+  109  ansible "*" -a "ls -l /root/" -b
+  110  ansible "*" -m user "kp"
+  111  ansible-doc user
+  112  ansible "*" -m user "user=kp"
+  113  ansible "*" -m user "name=kp state=preset" --ask-pass
+  114  ansible "*" -m user -a "name=kp state=preset" --ask-pass
+  115  ansible "*" -m user -a "name=kp state=preset"
+  116  ansible "*" -m user -a "name=kp state=preset" -b
+  117  ansible "*" -m user -a "name=kp state=present"
+  118  ansible "*" -m user -a "name=kp state=present" -b
+  119  ansible "*" -m servie -a "name=rsyslog state=stopped"
+  120  ansible "*" -m servie -a "name=rsyslog state=stopped" -b
+  121  ansible "*" -m servie -a "name=rsyslog state=stopped"
+  122  ansible "*" -m servie -a "name=rsyslog.service state=stopped" -b
+  123  ansible "*" -m servie -a "name=ntpd state=start" -b
+  124  ansible "*"  -a "uptime" -b
+  125  ansible "*"  -a "cat /etc/*release" -b
+  126  ansible "*"  -a "cat /etc/*release"
+  127  ansible "*"  -a "cat /etc/*relese"
+  128  ansible "*"  -a "cat /etc/*relese" -b
+  129  ansible "*"  -a "cat /etc/*release" -b
+  130  ansible "*"  -a "cat /etc/redhat-release" -b
+  131  ansible-doc | grep -i yum
+  132  ansible-doc -l | grep -i yum
+  133  ansible localhost -m yum -a "telnet"
+  134  ansible-doc yum
+  135  ansible localhost -m yum -a "name=telnet state=latest"
+  136  ansible "*" -m user -a "name=kp state=present uid=9999" -b
+  137  ansible-doc -l | grep -i file
+  138  ansible-doc -l | grep -i mkdir
+  139  ansible-doc -l | grep -i touch
+  140  ansible-doc -l | grep file
+  141  ansible-doc file
+  142  ansible "*" -m service -a name=ntpd state=start" -b
+  143  ansible "*" -m service -a "name=ntpd state=start" -b
+  144  ansible "*" -m service -a "name=ntpd state=started" -b
+  145  ansible "*" -m file -a "name=test state=start" -b
+  146  ansible "*" -m file -a "name=test path=/tmp/ owner=root" -b
+  147  ansible "*" -m file -a "name=test path=/tmp/ owner=root state=present" -b
+  148  ansible-doc file
+  149  ansible "*" -m file -a "name=test path=/tmp/ owner=root state=touch mode=u=rw,g=r,o=r" -b
+  150  ansible "*" -m file -a "name=/tmp/test path=/tmp/ owner=root state=touch mode=u=rw,g=r,o=r" -b
+  151  vim scp.sh
+  152  mv scp.sh script.sh
+  153  ansible "*" -m script -a "script.sh"
+  154  ansible "*" -m script -a "sh script.sh"
+  155  ansible "*" -m script -a "sh script.sh" -b
+  156  pwd
+  157  ansible "*" -m script -a "sh /root/script.sh" -b
+  158  ansible "*" -m shell -a "sh script.sh" -b
+  159  ansible "*" -m shell -a "script.sh" -b
+  160  ansible-doc shell
+  161  ansible "*" -m shell -a "executable script.sh" -b
+  162  ansible "*" -m shell -a "state=executable script.sh" -b
+  163  vim httpd.yml
+  164  rm -rf .httpd.yml.swp
+  165  vim httpd.yml
+  166  hsit
+  167  history
+  168  ansible-playbook --syntax-check httpd.yml
+  169  history
+  170  vim httpd.yml
+  171  ansible-playbook --syntax-check httpd.yml
+  172  ansible-playbook check httpd.yml
+  173  vim httpd.yml
+  174  ansible-playbook check httpd.yml
+  175  vim httpd.yml
+  176  ansible-playbook check httpd.yml
+  177  ansible-playbook --syntax-check httpd.yml
+  178  vim httpd.yml
+  179  ansible-playbook --syntax-check httpd.yml
+  180  vim httpd.yml
+  181  ansible-playbook --syntax-check httpd.yml
+  182  vim httpd.yml
+  183  ansible-playbook --syntax-check httpd.yml
+  184  vim httpd.yml
+  185  ansible-playbook --syntax-check httpd.yml
+  186  vim httpd.yml
+  187  ansible-playbook --syntax-check httpd.yml
+  188  vim httpd.yml
+  189  ansible-playbook --syntax-check httpd.yml
+  190  vim httpd.yml
+  191  ansible-playbook --syntax-check httpd.yml
+  192  vim httpd.yml
+  193  ansible "*" -m setup
+  194  ansible "*" -m setup | grep -i hostname
+  195  ansible "*" -m setup | grep -i ipv4
+  196  ansible "*" -m setup -a ansible_default_ipv4
+  197  ansible "*" -m setup -a "Host {{ ansible_default_ipv4 }}"
+  198  ansible "*" -m setup -a filter="Host {{ ansible_default_ipv4 }}"
+  199  ansible "*" -m setup -a filter="{{ ansible_default_ipv4 }}"
+  200  history | grep -i filter
+  201  ansible "*" -m setup -a filter="ansible_default_ipv4"
+  202  ansible "*" -m setup -a filter="ansible_default_ipv4_address"
+  203  ansible "*" -m setup -a filter="ansible_all_ipv4_address"
+  204  ansible "*" -m setup -a filter="ansible_all_ipv4_*"
+  205  ansible "*" -m setup | grep -i ansible | less
+  206  ansible "*" -m setup -a filter="ansible_all_ipv4_address"
+  207  ansible "*" -m setup -a filter="ansible_all_ipv4_addresses"
+  208  vim httpd.yml
+  209   >  httpd.yml
+  210  vim httpd.yml
+  211  ansible-playbook --syntax-check httpd.yml
+  212  ansible-playbook check httpd.yml
+  213  ansible-playbook --syntax-check httpd.yml
+  214  ansible-playbook check httpd.yml
+  215  ansible-playbook --check httpd.yml
+  216  ansible-playbook httpd.yml
+  217  vim httpd.yml
+  218  ansible-playbook httpd.yml
+  219  vim httpd.yml
+  220   > httpd.yml
+  221  vim httpd.yml
+  222  ansible-playbook --check httpd.yml
+  223  ansible-playbook httpd.yml -e user1="KK"
+  224  vim httpd.yml
+  225  ansible-playbook httpd.yml -e user1="KK"
+  226  vim httpd.yml
+  227  ansible-playbook httpd.yml -e user1="KK"
+  228  vim httpd.yml
+  229  ansible-playbook httpd.yml -e user1="KK"
+  230  vim httpd.yml
+  231  ansible-playbook --check httpd.yml
+  232  vim httpd.yml
+  233  ansible-playbook --check httpd.yml
+  234  vim httpd.yml
+  235  vim ntp.yml
+  236  ansible-doc | grep -i with
+  237  ansible-doc -l | grep -i with
+  238  ansible-doc yum
+  239  ansible-doc file
+  240  vim ntp.yml
+  241  ansible-doc wget
+  242  ansible-doc -l | grep -i wget
+  243  ansible-doc -l | grep -i download
+  244  ansible-doc get_url
+  245  ansible-doc shell
+  246  vim ntp.yml
+  247  ansible-doc extract
+  248  ansible-doc get_url
+  249  ansible-doc -l | grep -i extract
+  250  ansible-doc -l | grep -i tar
+  251  ansible-doc unarchive
+  252  ansible-doc shell
+  253  ansible-doc file
+  254  ansible-doc wait
+  255  ansible-doc -l | grep -i sleep
+  256  ansible-doc -l | grep -i wait
+  257  ansible-doc wait_for
+  258  vi ntp.yml
+  259  clear
+  260  history
+  261  ansible "*" -m setup | less
+  262  history >> day1.txt
+  263  ansible * --list-hosts | less
+  264  ansible * --list-hosts
+  265  ansible "*" --list-hosts
+  266  ansible --list-hosts
+  267  ansible all --list-hosts
+  268  ansible web --list-hosts
+  269  ansible deb --list-hosts
+  270  ansible * --list
+  271  ansible * --list-hosts
+  272  ansible * --lists
+  273  vim user.yml
+  274  ansible-playbook --syntax-check user.yml
+  275  vim user.yml
+  276  ansible-playbook --syntax-check user.yml
+  277  vim user.yml
+  278  ansible-playbook --syntax-check user.yml
+  279  vim user.yml
+  280  ansible-playbook --syntax-check user.yml
+  281  cat user.yml
+  282  ansible-playbook user.yml
+  283  ansible-playbook user.yml  -b
+  284  vim user.yml
+  285  ansible-playbook --check
+  286  clear
+  287  ansible-playbook -check
+  288  ansible-playbook -checks
+  289  ansible-playbook --check user.yml
+  290  less user.retry
+  291  cat user.yml
+  292  ansible-playbook user.yml  -b
+  293  vim user.yml
+  294  ansible-playbook --check user.yml
+  295  ansible-playbook --syntax-check user.yml
+  296  ansible-playbook user.yml
+  297  ansible-playbook user.yml --list-hosts
+  298  cp user.yml ntp.yml
+  299  vim ntp.yml
+  300  ansible-doc copy
+  301  vim ntp.yml
+  302  ansible-playbook --syntax-check user.yml
+  303  ansible-playbook --syntax-check ntp.yml
+  304  vim ntp.yml
+  305  ansible-playbook ntp.yml
+  306  vim ntp.yml
+  307  ansible-playbook ntp.yml
+  308  touch /etc/ntp.conf
+  309  ansible-playbook ntp.yml
+  310  cp ntp.yml ntp.yml_old
+  311  vim ntp.yml
+  312  ansible-playbook ntp.yml
+  313  vim ntp.yml
+  314  ansible-playbook ntp.yml
+  315  rpm -qa | grep -i ntp
+  316  vim ntp.yml
+  317  cat /etc/ntp.conf
+  318  yum install ntp
+  319  ansible-playbook ntp.yml --step
+  320  vim ntp.yml
+  321  cp tomcat.yml
+  322  vim tomcat.yml
+  323  ansible-playbook --syntax-check tomcat.yml
+  404  vim tomcat.yml
+  405  ansible-playbook --syntax-check tomcat.yml
+  406  vim tomcat.yml
+  407  ansible-playbook --syntax-check tomcat.yml
+  408  vim tomcat.yml
+  409  ansible "*" -m setup | grep -i "ansible_"
+  410  ansible ans-srv -m setup | grep -i "anisible_"
+  411  ansible ans-srv -m setup | grep -i "ansible_"
+  412  ansible localhost -m setup | grep -i "ansible_"
+  413  ansible localhost -m setup -a filter="ansible"
+  414  ansible localhost -m setup -a filter="ansible_all"
+  415  ansible localhost -m setup -a filter="ansible_all_ipv4_addresses"
+  416  ansible localhost -m setup -a filter="ansible_date_time"
+  417  ansible-playbook --syntax-check tomcat.yml
+  418  vim tomcat.yml
+  419  ansible localhost -m setup -a filter="ansible_date_time"
+  420  vim httpd.yml
+  421  ansible-playbook --syntex-check httpd.yml
+  422  ansible-playbook --syntax-check httpd.yml
+  423  vim httpd.yml
+  424  vim ntp.yml
+  425  rm -rf .ntp.yml.swp
+  426  vim ntp.yml
+  427  vim ntp.yml
+  428  rm -rf .ntp.yml.swp
+  429  cat ntp.yml
+  430  clear
+  431  history
+===========================================================================================
+
+GITHUB
+
+
+
+  818  git --version
+  819  git --help
+  820  git config --global user.email "kadm@gmail.com"
+  821  git config --global user.name "kadm"
+  823  git config --global -l
+  834  git init
+  837  cd .git/
+  842  git remote add origin https://github.com/Krunal1001/readme.git
+  850  git remote remove origin https://github.com/Krunal1001
+  852  git remote remove origin
+  853  git remote -v
+  854  git remote add origin https://github.com/Krunal1001/Readme.git
+  856  git pull origin master
+  858  git status
+  862  git pull origin master
+  870  git status
+  871  git add --all
+  872  git status
+  878  git commit -m "Ansible Example uploaded"
+  879  git status
+  880  git log
+  882  git push origin master
+
+
+

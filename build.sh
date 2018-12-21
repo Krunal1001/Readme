@@ -1,1 +1,1 @@
-yum install telnet -y
+yum install samba -y
